@@ -6,17 +6,15 @@ CharacterController = {
 	blocking_speed_multiplier = 0.5,
 
 	OnStart = function(self)
-		
-		Players = {}
 
-		Players[self.player_index] = self.actor
+		self.player = self.actor:GetComponent("Player")
 
 		self.rb = self.actor:GetComponent("Rigidbody")
 		self.animator = self.actor:GetComponent("Animator")
 		self.sr = self.actor:GetComponent("AnimatedSprite")
 		self.jump_power = self.jump_power * self.rb:GetMass()
 
-		if self.player_index == 1 then
+		if self.player["index"] == 1 then
 			
 			self.GetRight = function() return Input.GetKeyDown("right") end
 			self.GetLeft = function() return Input.GetKeyDown("left") end

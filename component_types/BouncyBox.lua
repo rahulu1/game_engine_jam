@@ -1,5 +1,7 @@
 BouncyBox = {
 
+	-- Reutilize this component's logic for punches?
+	
 	is_bouncing = false,
 
 	OnStart = function(self)

@@ -23,6 +23,17 @@
 					"type": "Hud"
 				}
 			}
+		},
+		{
+			"name": "Animated Sprite",
+			"components": {
+				"1": {
+					"type": "Animator"
+				},
+				"2": {
+					"type": "AnimatedSprite"
+				}
+			}
 		}
 	]
 }

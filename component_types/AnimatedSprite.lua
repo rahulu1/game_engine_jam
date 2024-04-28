@@ -11,7 +11,7 @@ AnimatedSprite = {
 		self.pos = Vector2(0, 0)
 		self.rot_degrees = 0
         self.animator = self.actor:GetComponent("Animator")
-        self.animator:SetTimescale(8.0)
+        -- self.animator:SetTimescale(8.0)
 	end,
 
 	OnLateUpdate = function(self)

@@ -1,4 +1,6 @@
 AnimatedSprite = {
+	scale_x = 1.0,
+	scale_y = 1.0,
 	r = 255,
 	g = 255,
 	b = 255,
@@ -31,7 +33,7 @@ AnimatedSprite = {
 
         -- Debug.Log(self.sprite)
 		if self.sprite ~= nil then
-			Image.DrawEx(self.sprite, self.pos.x, self.pos.y, self.rot_degrees, 1.0, 1.0, 0.5, 0.5, self.r, self.g, self.b, self.a, self.sorting_order)
+			Image.DrawEx(self.sprite, self.pos.x, self.pos.y, self.rot_degrees, self.scale_x, self.scale_y, 0.5, 0.5, self.r, self.g, self.b, self.a, self.sorting_order)
 		end
 	end
 }

@@ -16,23 +16,23 @@ CharacterController = {
 
 		if self.player["index"] == 1 then
 			
-			self.GetRight = function() return Input.GetKeyDown("right") end
-			self.GetLeft = function() return Input.GetKeyDown("left") end
+			self.GetRight = function() return Input.GetKey("right") end
+			self.GetLeft = function() return Input.GetKey("left") end
 			self.GetUp = function() return (Input.GetKeyDown("up") or Input.GetKeyDown("space")) end
 			self.GetDown = function() return Input.GetKeyDown("down") end
 
-			self.GetAttack = function() return Input.GetKeyDown("z") end
-			self.GetBlock = function() return Input.GetKeyDown("x") end
+			self.GetAttack = function() return Input.GetKeyDown("k") end
+			self.GetBlock = function() return Input.GetKeyDown("l") end
 
 		else
 
-			self.GetRight = function() return Input.GetButtonDown("Right") end
-			self.GetLeft = function() return Input.GetButtonDown("Left") end
-			self.GetUp = function() return Input.GetButtonDown("Up") end
-			self.GetDown = function() return Input.GetButtonDown("Down") end
+			self.GetRight = function() return Input.GetKey("d") end
+			self.GetLeft = function() return Input.GetKey("a") end
+			self.GetUp = function() return (Input.GetKeyDown("w") or Input.GetKeyDown("space")) end
+			self.GetDown = function() return Input.GetKeyDown("s") end
 
-			self.GetAttack = function() return Input.GetButtonDown("RightShoulder") end
-			self.GetBlock = function() return Input.GetButtonDown("LeftShoulder") end
+			self.GetAttack = function() return Input.GetKeyDown("k") end
+			self.GetBlock = function() return Input.GetKeyDown("l") end
 		end
 
 
@@ -57,18 +57,18 @@ CharacterController = {
 			horizontal_input = horizontal_input * self.blocking_speed_multiplier
 		end
 
-		-- Vertical
-		local vertical_input = 0
+		-- -- Vertical
+		-- local vertical_input = 0
 
-		-- Check on ground
-		local ground_object = Physics.Raycast(self.rb:GetPosition(), Vector2(0, 1), 0.5)
+		-- -- Check on ground
+		-- local ground_object = Physics.Raycast(self.rb:GetPosition(), Vector2(0, 1), 0.5)
 		
-		if self.GetUp() or Input.GetKeyDown("space") then
-			if ground_object ~= nil then
-				vertical_input = -self.jump_power
-				-- TODO: Trigger jump animation
-			end
-		end
+		-- if self.GetUp() or Input.GetKeyDown("space") then
+		-- 	if ground_object ~= nil then
+		-- 		vertical_input = -self.jump_power
+		-- 		-- TODO: Trigger jump animation
+		-- 	end
+		-- end
 
 		self.rb:SetVelocity(Vector2(horizontal_input, vertical_input))
   end

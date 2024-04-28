@@ -1,19 +1,30 @@
 {
-	"name": "player",
+	"name": "Player",
 	"components": {
-		"1" : {
-			"type": "Rigidbody",
-			"collider_type": "circle",
-			"radius": 0.45,
-			"density": 0.5,
-			"trigger_radius": 0.55
+		"1": {
+			"type": "Animator",
+			"animation_name": "engineer_idle"
 		},
 		"2": {
-			"type": "KeyboardControls"
+			"type": "AnimatedSprite",
+			"scale_x": 5,
+			"scale_y": 5
 		},
 		"3": {
-			"type": "SpriteRenderer",
-			"sprite": "circle"
+			"type": "Rigidbody",
+			"body_type": "dynamic",
+			"has_trigger": false,
+			"x": 10,
+			"y": 10,
+			"height": 5,
+			"width": 5
+		},
+		"4": {
+			"type": "Player",
+			"index": 1
+		},
+		"5": {
+			"type": "CharacterController"
 		}
 	}
 }

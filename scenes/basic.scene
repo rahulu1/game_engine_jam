@@ -1,40 +1,82 @@
 {
-	"actors": [
+    "actors": [
+        {
+            "name": "camera",
+            "components": {
+                "1": {
+                    "type": "CameraManager"
+                }
+            }
+        },
+        {
+            "name": "GameManager",
+            "components": {
+                "1": {
+                    "type": "GameManager"
+                }
+            }
+        },
+        {
+            "name": "HUD",
+            "components": {
+                "1": {
+                    "type": "Hud"
+                }
+            }
+        },
+        {
+			"name": "p1"
+			"template": "Player"
+        },
 		{
-			"name": "camera",
-			"components": {
-				"1": {
-					"type": "CameraManager"
-				}
-			}
-		},
-		{
-			"name": "GameManager",
-			"components": {
-				"1": {
-					"type": "GameManager"
-				}
-			}
-		},
-		{
-			"name": "HUD",
-			"components": {
-				"1": { 
-					"type": "Hud"
-				}
-			}
-		},
-		{
-			"name": "Animated Sprite",
-			"components": {
+			"name": "p2",
+			"template": "Player"
+				"components": {
 				"1": {
 					"type": "Animator",
 					"animation_name": "engineer_idle"
 				},
 				"2": {
-					"type": "AnimatedSprite"
+					"type": "AnimatedSprite",
+					"scale_x": 5,
+					"scale_y": 5
+				},
+				"3": {
+					"type": "Rigidbody",
+					"body_type": "dynamic",
+					"has_trigger": false,
+					"x": 10,
+					"y": 10,
+					"height": 5,
+					"width": 5
+				},
+				"4": {
+					"type": "Player",
+					"index": 1
+				},
+				"5": {
+					"type": "CharacterController"
 				}
 			}
 		}
-	]
+        {
+            "name": "Floor",
+            "components": {
+                "1": {
+                    "type": "SpriteRenderer",
+                    "sprite": "box2",
+					"scale_x": 20,
+                    "sorting_order": -999
+                },
+                "2": {
+                    "type": "Rigidbody",
+                    "body_type": "kinematic",
+                    "has_trigger": false,
+                    "x": 10,
+                    "y": 11,
+                    "width": 20
+                }
+            }
+        }
+    ]
 }

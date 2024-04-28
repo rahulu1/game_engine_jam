@@ -1,26 +1,26 @@
 {
-    "total_frames": 6,
+    "total_frames": 8,
     "fps": 8,
     "keyframes": [
         {
             "frame_index": 0,
-            "image_name": "engineer/idle-1"
-        },
-        {
-            "frame_index": 1,
-            "image_name": "engineer/idle-2"
+            "image_name": "engineer/punch-1"
         },
         {
             "frame_index": 2,
-            "image_name": "engineer/idle-3"
+            "image_name": "engineer/punch-2"
         },
         {
             "frame_index": 3,
-            "image_name": "engineer/idle-4"
+            "image_name": "engineer/punch-3"
+        },
+        {
+            "frame_index": 4,
+            "image_name": "engineer/punch-4"
         },
         {
             "frame_index": 5,
-            "image_name": "engineer/idle-4"
+            "image_name": "engineer/punch-return"
         }
     ]
 }

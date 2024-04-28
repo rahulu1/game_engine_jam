@@ -1,0 +1,10 @@
+{
+    "total_frames": 3,
+    "fps": 12,
+    "keyframes": [
+        {
+            "frame_index": 0,
+            "image_name": "engineer/flinch"
+        }
+    ]
+}

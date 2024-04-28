@@ -22,7 +22,7 @@ CharacterController = {
 			self.GetDown = function() return Input.GetKeyDown("down") end
 
 			self.GetAttack = function() return Input.GetKeyDown("k") end
-			self.GetBlock = function() return Input.GetKeyDown("l") end
+			self.GetBlock = function() return Input.GetKey("l") end
 
 		else
 
@@ -31,8 +31,8 @@ CharacterController = {
 			self.GetUp = function() return (Input.GetKeyDown("w") or Input.GetKeyDown("space")) end
 			self.GetDown = function() return Input.GetKeyDown("s") end
 
-			self.GetAttack = function() return Input.GetKeyDown("k") end
-			self.GetBlock = function() return Input.GetKeyDown("l") end
+			self.GetAttack = function() return Input.GetKeyDown("1") end
+			self.GetBlock = function() return Input.GetKey("q") end
 		end
 
 

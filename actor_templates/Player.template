@@ -7,8 +7,8 @@
 		},
 		"2": {
 			"type": "AnimatedSprite",
-			"scale_x": 8,
-			"scale_y": 8
+			"scale_x": 10,
+			"scale_y": 10
 		},
 		"3": {
 			"type": "Rigidbody",

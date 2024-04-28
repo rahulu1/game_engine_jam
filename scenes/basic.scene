@@ -33,7 +33,7 @@
 			"template": "Player",
 			"components": {
 				"2": {
-					"scale_x": -8
+					"scale_x": -10
 				},
 				"3": {
 					"x": 15
@@ -48,9 +48,9 @@
             "components": {
                 "1": {
                     "type": "SpriteRenderer",
-                    "sprite": "office_bg",
-					"scale_x": 9,
-					"scale_y": 9,
+                    "sprite": "office_bg_ex",
+					"scale_x": 8,
+					"scale_y": 8,
                     "sorting_order": -999
                 },
                 "2": {
@@ -58,7 +58,7 @@
                     "body_type": "kinematic",
                     "has_trigger": false,
 					"has_collider": false,
-					"y": 7,
+					"y": 8,
 					"x": 10
                 },
 				"3": {
@@ -66,7 +66,7 @@
                     "body_type": "kinematic",
                     "has_trigger": false,
 					"x": 10,
-                    "y": 11,
+                    "y": 13,
                     "width": 50
                 }
             }

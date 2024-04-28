@@ -28,7 +28,8 @@
 			"name": "Animated Sprite",
 			"components": {
 				"1": {
-					"type": "Animator"
+					"type": "Animator",
+					"animation_name": "engineer_idle"
 				},
 				"2": {
 					"type": "AnimatedSprite"

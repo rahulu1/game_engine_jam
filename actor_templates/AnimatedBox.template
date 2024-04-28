@@ -3,7 +3,7 @@
 	"components": {
 		"1": {
 			"type": "Animator",
-			"animation_name": "test"
+			"animation_name": "engineer_idle"
 		},
 		"2": {
 			"type": "AnimatedSprite",

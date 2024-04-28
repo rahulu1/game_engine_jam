@@ -32,6 +32,9 @@
 			"name": "p2",
 			"template": "Player",
 			"components": {
+				"2": {
+					"scale_x": -8
+				},
 				"3": {
 					"x": 15
 				},
@@ -55,7 +58,7 @@
                     "has_trigger": false,
                     "x": 10,
                     "y": 11,
-                    "width": 20
+                    "width": 40
                 }
             }
         }

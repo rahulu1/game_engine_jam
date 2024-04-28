@@ -14,14 +14,14 @@
 			"type": "Rigidbody",
 			"body_type": "dynamic",
 			"has_trigger": false,
-			"x": 10,
+			"x": 5,
 			"y": 10,
 			"height": 5,
 			"width": 5
 		},
 		"4": {
 			"type": "Player",
-			"index": 1
+			"index": 0
 		},
 		"5": {
 			"type": "CharacterController"

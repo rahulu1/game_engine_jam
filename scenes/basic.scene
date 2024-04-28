@@ -25,40 +25,21 @@
             }
         },
         {
-			"name": "p1"
+			"name": "p1",
 			"template": "Player"
         },
 		{
 			"name": "p2",
-			"template": "Player"
-				"components": {
-				"1": {
-					"type": "Animator",
-					"animation_name": "engineer_idle"
-				},
-				"2": {
-					"type": "AnimatedSprite",
-					"scale_x": 5,
-					"scale_y": 5
-				},
+			"template": "Player",
+			"components": {
 				"3": {
-					"type": "Rigidbody",
-					"body_type": "dynamic",
-					"has_trigger": false,
-					"x": 10,
-					"y": 10,
-					"height": 5,
-					"width": 5
+					"x": 15
 				},
 				"4": {
-					"type": "Player",
 					"index": 1
-				},
-				"5": {
-					"type": "CharacterController"
 				}
 			}
-		}
+		},
         {
             "name": "Floor",
             "components": {

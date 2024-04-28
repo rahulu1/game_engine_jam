@@ -57,8 +57,8 @@ CharacterController = {
 			horizontal_input = horizontal_input * self.blocking_speed_multiplier
 		end
 
-		-- -- Vertical
-		-- local vertical_input = 0
+		-- Vertical
+		local vertical_input = 0
 
 		-- -- Check on ground
 		-- local ground_object = Physics.Raycast(self.rb:GetPosition(), Vector2(0, 1), 0.5)

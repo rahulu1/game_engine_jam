@@ -5,6 +5,9 @@ CharacterController = {
 	jump_power = 1000.0,
 	blocking_speed_multiplier = 0.5,
 	reset_to_idle = false,
+	reset_to_block_hold = false,
+
+	is_blocking = false,
 
 	OnStart = function(self)
 
@@ -48,6 +51,11 @@ CharacterController = {
 			self.reset_to_idle = false
 		end
 
+		if self.reset_to_block_hold == true then
+			self.animator:SetAnimation("engineer_block_hold")
+			self.reset_to_block_hold = false
+		end
+
 		-- Horizontal
 		local horizontal_input = 0
 
@@ -61,6 +69,14 @@ CharacterController = {
 
 		if self:GetBlock() then
 			horizontal_input = horizontal_input * self.blocking_speed_multiplier
+			if self.is_blocking == false then
+				self.is_blocking = true
+				self.animator:SetAnimation("engineer_block_start"):SetLoops(1, LoopType.Restart):OnKill(self.OnBlockStarted, self)
+			end
+		end
+
+		if self.is_blocking and not self:GetBlock() then
+			self:OnBlockFinished()
 		end
 
 		if self:GetAttack() then
@@ -85,5 +101,14 @@ CharacterController = {
 
   OnAttackFinished = function(self)
 	self.reset_to_idle = true
+  end,
+
+  OnBlockStarted = function(self)
+	self.reset_to_block_hold = true
+  end,
+
+  OnBlockFinished = function(self)
+	self.reset_to_idle = true
+	self.is_blocking = false
   end
 }
